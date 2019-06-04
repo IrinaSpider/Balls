@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.ball{
+			height: 150px;
+			width: 150px;
+			background: red;
+			border-radius: 50%;
+			position: absolute;			
+		}
+	</style>
+</head>
+<body>
+	<h1>Очки: <span class="score"></span></h1>
+	
+	<div class="ball summa" style="margin-left: 100px; margin-top: 400px;  display: block"></div>
+	<div class="ball summa" style="margin-right: 50px; margin-top: 100px; display: block"></div>
+	<div class="ball summa" style="margin-left: 1200px; margin-top: 300px; display: block"></div>
+	<div class="ball summa" style="margin-left: 800px; margin-top: 10px; display: block"></div>
+	<div class="ball summa" style=" margin-top: 500px; margin-left: 630px; display: block"></div>
+	<div class="ball summa" style="margin-left: 540px; margin-top: 200px; display: block"></div>
+	<div class="ball summa" style="margin-top: 300px; margin-left: 400px; display: block"></div>
+	<div class="ball summa" style="margin-top: 200px; margin-left: 1000px; display: block"></div>
+	<div class="ball summa" style="margin-left: 1200px; margin-top: 500px; display: block"></div>
+	<div class="ball summa" style="margin-left: 400px; margin-top: 50px; display: block"></div>
+	
+	<script type="text/javascript">
+    	let score = 0
+    	let balls = document.querySelectorAll(".ball")
+    	for(let i = 0; i<10; i = i + 1){
+	    	balls[i].onclick = function(){
+	    		balls[i].style.display = "none";
+	    		score=score+1
+	    		document.querySelector(".score").innerHTML = score
+	    	}
+	    	}
+		
+
+		   
+		let x = function(){	
+    		for(let index = 0; index<10; index = index + 1){
+		balls[index].style.display = "none"
+		}
+    	}
+    	setTimeout(x, 3000);
+ 
+	</script>
+</body>
+</html>
